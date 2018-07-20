@@ -15,7 +15,7 @@ aws_secret_access_key:
 role: ECS-LambdaExecuteRoleForContainerInstanceDraining
 
 timeout: 300
-memory_size: 512
+memory_size: 128
 
 dist_directory: dist
 
