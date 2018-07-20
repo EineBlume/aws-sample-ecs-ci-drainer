@@ -128,3 +128,15 @@ celerybeat-schedule
 .instance
 .test-reports
 .test-results
+
+
+### Terraform ###
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
