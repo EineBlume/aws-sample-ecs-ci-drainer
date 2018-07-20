@@ -130,9 +130,4 @@ def _handle(event):
 @raven_client.capture_exceptions
 def handler(event, context):
     logger.info(f'Lambda Event: {event}')
-
-    # noinspection PyBroadException
-    try:
-        _handle(event)
-    except Exception:
-        raven_client.captureException()
+    _handle(event)
