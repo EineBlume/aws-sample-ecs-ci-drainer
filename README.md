@@ -26,7 +26,7 @@ AWS-ECS 클러스터 인스턴스가 `Scale-In`될때 드레이닝 해주는 예
 `lambda deploy` 명령어를 통해 배포할 수 있습니다(실행하면 `AWS-Lambda` 함수를 만듬). 
 
 
-## ASG LifeCycle Role
+## ASG LifeCycle Policy
 ```
 {
     "Version": "2012-10-17",
@@ -44,7 +44,7 @@ AWS-ECS 클러스터 인스턴스가 `Scale-In`될때 드레이닝 해주는 예
 }
 ```
 
-## Lambda Execute Role
+## Lambda Execute Policy
 ```
 {
     "Version": "2012-10-17",
