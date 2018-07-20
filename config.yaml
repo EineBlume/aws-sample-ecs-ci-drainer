@@ -1,0 +1,25 @@
+region: ap-northeast-2
+
+function_name: aws-ecs-ci-drainer
+handler: service.handler
+description: Make status to `DRAINING` when instance of asg terminate.
+runtime: python3.6
+
+# S3 upload requires appropriate role with s3:PutObject permission
+# (ex. basic_s3_upload), a destination bucket, and the key prefix
+# bucket_name: 'example-bucket'
+# s3_key_prefix: 'path/to/file/'
+
+aws_access_key_id:
+aws_secret_access_key:
+role: ECS-LambdaExecuteRoleForContainerInstanceDraining
+
+timeout: 300
+memory_size: 512
+
+dist_directory: dist
+
+# Build options
+# build:
+#   # a comma delimited list of directories in your project root that contains source to package.
+#   source_directories: utils
